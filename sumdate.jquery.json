@@ -20,8 +20,8 @@
     ],
     "licenses": [
         {
-            "type": "MIT",
-            "url": ""
+            "type": "BSD License",
+            "url": "https://sourceforge.net/directory/license:bsd/"
         }
     ],
     "bugs": "https://sourceforge.net/p/sumdate/",
