@@ -1,0 +1,34 @@
+{
+    "name": "sumdate",
+    "title": "sumdate",
+    "description": "jQuery plugin for date manipulation.",
+    "keywords": [
+        "date",
+        "sum"
+    ],
+    "version": "0.2.0",
+    "author": {
+        "name": "Luciano Mendes do Prado",
+        "url": "https://sourceforge.net/p/sumdate/wiki/Home/"
+    },
+    "maintainers": [
+        {
+            "name": "Luciano M Prado",
+            "email": "lucianomendesprado@gmail.com",
+            "url": "https://sourceforge.net/p/sumdate/wiki/Home/"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": ""
+        }
+    ],
+    "bugs": "https://sourceforge.net/p/sumdate/",
+    "homepage": "https://sourceforge.net/p/sumdate/",
+    "docs": "https://sourceforge.net/p/sumdate/wiki/Home/",
+    "download": "https://sourceforge.net/projects/sumdate/files/?source=navbar",
+    "dependencies": {
+        "jquery": ">=1.6"
+    }
+}
