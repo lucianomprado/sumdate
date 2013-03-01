@@ -25,7 +25,7 @@
         }
     ],
     "bugs": "https://sourceforge.net/p/sumdate/",
-    "homepage": "https://sourceforge.net/p/sumdate/",
+    "homepage": "http://lucianomprado.github.com/sumdate",
     "docs": "https://sourceforge.net/p/sumdate/wiki/Home/",
     "download": "https://sourceforge.net/projects/sumdate/files/?source=navbar",
     "dependencies": {
