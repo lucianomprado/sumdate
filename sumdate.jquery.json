@@ -24,10 +24,17 @@
             "url": "http://sourceforge.net/directory/license:bsd/"
         }
     ],
+<<<<<<< HEAD
     "bugs": "http://sourceforge.net/p/sumdate/",
     "homepage": "http://lucianomprado.github.com/sumdate",
     "docs": "http://sourceforge.net/p/sumdate/wiki/Home/",
     "download": "http://sourceforge.net/projects/sumdate/files/?source=navbar",
+=======
+    "bugs": "https://sourceforge.net/p/sumdate/",
+    "homepage": "http://lucianomprado.github.com/sumdate",
+    "docs": "https://sourceforge.net/p/sumdate/wiki/Home/",
+    "download": "https://sourceforge.net/projects/sumdate/files/?source=navbar",
+>>>>>>> 48cb2019a97a08818c7688ca03fb576e5681bf7b
     "dependencies": {
         "jquery": ">=1.6"
     }
