@@ -1,33 +1,34 @@
 {
     "name": "sumdate",
     "title": "sumdate",
-    "description": "jQuery plugin for date manipulation.",
+    "description": "jQuery plugin for date manipulation.</br>Sintax</br>Directly invoke</br>String/Date $.sumdate(date:String/Date,functions:[],sumValues:{},pattern:String,update:boolean);</br>or</br>Selector invoke</br>void/Array $(selector).sumdate(functions:[],sumValues:{},pattern:String,update:boolean);</br>Params</br>selector or date</br>selector: jQuery return elements html that contains date value.</br>date: date value String or Date.</br>functions</br>sum: get values in sumValues and sum parameter date.</br>stringToDate: convert a date type String in Date type</br>dateToString: converte a date Type Date in String</br>validate: return true if the date value is valid or return false not valid (only date a type String) not compatible another functions.</br> pattern:</br>define a format date writer.</br>update:</br>update the elements that contains the date with the result (only directlty selector).",
     "keywords": [
         "date",
-        "sum"
+        "sum",
+        "validate"
     ],
-    "version": "0.2.0",
+    "version": "0.3.0",
     "author": {
         "name": "Luciano Mendes do Prado",
-        "url": "http://sourceforge.net/p/sumdate/wiki/Home/"
+        "url": "https://sourceforge.net/p/sumdate/wiki/Home/"
     },
     "maintainers": [
         {
             "name": "Luciano M Prado",
             "email": "lucianomendesprado@gmail.com",
-            "url": "http://sourceforge.net/p/sumdate/wiki/Home/"
+            "url": "https://sourceforge.net/p/sumdate/wiki/Home/"
         }
     ],
     "licenses": [
         {
             "type": "BSD License",
-            "url": "http://sourceforge.net/directory/license:bsd/"
+            "url": "https://sourceforge.net/directory/license:bsd/"
         }
     ],
-    "bugs": "http://sourceforge.net/p/sumdate/",
-    "homepage": "http://lucianomprado.github.com/sumdate",
-    "docs": "http://sourceforge.net/p/sumdate/wiki/Home/",
-    "download": "http://sourceforge.net/projects/sumdate/files/?source=navbar",
+    "bugs": "https://sourceforge.net/p/sumdate/",
+    "homepage": "https://sourceforge.net/p/sumdate/",
+    "docs": "https://sourceforge.net/p/sumdate/wiki/Home/",
+    "download": "https://sourceforge.net/projects/sumdate/files/?source=navbar",
     "dependencies": {
         "jquery": ">=1.6"
     }
