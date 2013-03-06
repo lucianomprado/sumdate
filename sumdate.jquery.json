@@ -1,7 +1,7 @@
 {
     "name": "sumdate",
     "title": "sumdate",
-    "description": "jQuery plugin for date manipulation.</br>Sintax</br>Directly invoke</br>String/Date $.sumdate(date:String/Date,functions:[],sumValues:{},pattern:String,update:boolean);</br>or</br>Selector invoke</br>void/Array $(selector).sumdate(functions:[],sumValues:{},pattern:String,update:boolean);</br>Params</br>selector or date</br>selector: jQuery return elements html that contains date value.</br>date: date value String or Date.</br>functions</br>sum: get values in sumValues and sum parameter date.</br>stringToDate: convert a date type String in Date type</br>dateToString: converte a date Type Date in String</br>validate: return true if the date value is valid or return false not valid (only date a type String) not compatible another functions.</br> pattern:</br>define a format date writer.</br>update:</br>update the elements that contains the date with the result (only directlty selector).",
+    "description": "jQuery plugin for date manipulation.\nSintax\nDirectly invoke\nString/Date $.sumdate(date:String/Date,functions:[],sumValues:{},pattern:String,update:boolean);\nor\nSelector invoke\nvoid/Array $(selector).sumdate(functions:[],sumValues:{},pattern:String,update:boolean);\nParams\nselector or date\nselector: jQuery return elements html that contains date value.\ndate: date value String or Date.\nfunctions\nsum: get values in sumValues and sum parameter date.\nstringToDate: convert a date type String in Date type\ndateToString: converte a date Type Date in String\nvalidate: return true if the date value is valid or return false not valid (only date a type String) not compatible another functions.\n pattern:\ndefine a format date writer.\nupdate:\nupdate the elements that contains the date with the result (only directlty selector).",
     "keywords": [
         "date",
         "sum",
@@ -10,13 +10,13 @@
     "version": "0.3.0",
     "author": {
         "name": "Luciano Mendes do Prado",
-        "url": "https://sourceforge.net/p/sumdate/wiki/Home/"
+        "url": ""
     },
     "maintainers": [
         {
             "name": "Luciano M Prado",
             "email": "lucianomendesprado@gmail.com",
-            "url": "https://sourceforge.net/p/sumdate/wiki/Home/"
+            "url": ""
         }
     ],
     "licenses": [
@@ -26,9 +26,9 @@
         }
     ],
     "bugs": "https://sourceforge.net/p/sumdate/",
-    "homepage": "https://sourceforge.net/p/sumdate/",
-    "docs": "https://sourceforge.net/p/sumdate/wiki/Home/",
-    "download": "https://sourceforge.net/projects/sumdate/files/?source=navbar",
+    "homepage": "https://github.com/lucianomprado/sumdate/wiki",
+    "docs": "https://github.com/lucianomprado/sumdate/wiki",
+    "download": "https://github.com/lucianomprado/sumdate/archive/0.3.0.zip",
     "dependencies": {
         "jquery": ">=1.6"
     }
