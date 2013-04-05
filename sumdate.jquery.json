@@ -1,34 +1,35 @@
 {
     "name": "sumdate",
     "title": "sumdate",
-    "description": "jQuery plugin for date manipulation. Sintaxe: $('#date').sumdate({functions:['sum'],sumValues{days,5},pattern:'YYYY/MM/DD'}}); or $.sumdate({date:'03/01/1982',sumValues{days:2,months:3}});",
+    "description": "jQuery plugin for date manipulation. Sintax Directly invoke  $.sumdate(date:String/Date,functions:[],sumValues:{},pattern:String,update:boolean); or Selector invoke $(selector).sumdate(functions:[],sumValues:{},pattern:String,update:boolean);.",
     "keywords": [
         "date",
         "sum",
-        "validate"
+        "validate",
+        "conversion"
     ],
-    "version": "0.3.3",
+    "version": "0.4.1",
     "author": {
         "name": "Luciano Mendes do Prado",
-        "url": ""
+        "url": "http://sourceforge.net/p/sumdate/wiki/Home/"
     },
     "maintainers": [
         {
             "name": "Luciano M Prado",
             "email": "lucianomendesprado@gmail.com",
-            "url": ""
+            "url": "http://sourceforge.net/p/sumdate/wiki/Home/"
         }
     ],
     "licenses": [
         {
             "type": "BSD License",
-            "url": "https://sourceforge.net/directory/license:bsd/"
+            "url": "http://sourceforge.net/directory/license:bsd/"
         }
     ],
-    "bugs": "https://sourceforge.net/p/sumdate/",
-    "homepage": "https://github.com/lucianomprado/sumdate/wiki",
+    "bugs": "http://sourceforge.net/p/sumdate/",
+    "homepage": "http://sourceforge.net/p/sumdate/",
     "docs": "http://sourceforge.net/p/sumdate/wiki/Home/",
-    "download": "http://sourceforge.net/projects/sumdate/files/jquery.sumdate-0.3.0.js/download",
+    "download": "http://sourceforge.net/projects/sumdate/files/?source=navbar",
     "dependencies": {
         "jquery": ">=1.6"
     }
