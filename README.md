@@ -1,7 +1,7 @@
 sumdate
 =======
 
-Jquery plugin used to sum dates
+Jquery plugin used to sum and validate dates
 
 
 Sintax

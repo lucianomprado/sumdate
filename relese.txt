@@ -1,3 +1,8 @@
+Relese 1.0.0
+Add unit test
+Fix bug in function validation
+Fix bug in function dateToString
+
 Relese 0.4.0
 Suports Hours format ex: 'DD/MM/YYY hh:mm:ss'
 update param sumValues ex:

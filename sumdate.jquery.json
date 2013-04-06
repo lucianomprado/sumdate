@@ -8,7 +8,7 @@
         "validate",
         "conversion"
     ],
-    "version": "0.4.1",
+    "version": "1.0.0",
     "author": {
         "name": "Luciano Mendes do Prado",
         "url": "http://sourceforge.net/p/sumdate/wiki/Home/"
@@ -27,7 +27,7 @@
         }
     ],
     "bugs": "http://sourceforge.net/p/sumdate/",
-    "homepage": "http://sourceforge.net/p/sumdate/",
+    "homepage": "https://github.com/lucianomprado/sumdate/wiki",
     "docs": "http://sourceforge.net/p/sumdate/wiki/Home/",
     "download": "http://sourceforge.net/projects/sumdate/files/?source=navbar",
     "dependencies": {
