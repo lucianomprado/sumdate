@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Functions sumdate's test</title>
+        <script src="jquery-1.8.1.min.js" charset="utf-8" type="text/javascript"></script>
+        <script src="jquery.sumdate-1.0.0.js" charset="utf-8" type="text/javascript"></script>
+        <script src="qunit-1.11.0.js"></script>
+        <link rel="stylesheet" href="qunit-1.11.0.css">
+        <script charset="utf-8" type="text/javascript">
+            test("Functions by method direct", function () {
+                var data = '28/02/2010';
+                equal($.sumdate({ date: data, functions: ['sum'], sumValues: { days: 1} }), '01/03/2010', 'sum');
+
+                equal($.sumdate({ date: data, functions: ['stringToDate'] }), (new Date('2010-02-28T00:00:00.0')).toString(), 'stringToDate');
+                equal($.sumdate({ date: (new Date('2010-02-28T00:00:00.0')), functions: ['dateToString'] }), data, 'dateToString');
+                equal($.sumdate({ date: (new Date('2010-02-28T00:00:00.0')), functions: ['dateToString'], pattern: 'YYYY-MM-DD hh:mm:ss' }), '2010-02-28 00:00:00', 'dateToString and pattern');
+                equal($.sumdate({ date: data, functions: ['validate'], sumValues: { days: 1} }), true, 'validate');
+                data = '29/02/2010';
+                equal($.sumdate({ date: data, functions: ['validate'], sumValues: { days: 1} }), false, 'validate false');
+
+            });
+            test('functions by method selector', function () {
+                equal($('[id^="data"]').sumdate({ functions: ['sum'], sumValues: { days: 1} })[0], '01/03/2010', 'sum 1#');
+                equal($('[id^="data"]').sumdate({ functions: ['sum'], sumValues: { days: 6, months: 4} })[1], '03/01/1983', 'sum 2#');
+                $('[id^="data"]').sumdate({ functions: ['sum'], sumValues: { days: 1 }, update: true });
+                equal($('#dataInput').val(), '01/03/2010', 'sum and update');
+            });
+         </script> 
+    </head>
+    <body>
+        <div id="qunit"></div>
+        <div id="qunit-fixture"></div>
+        <input type="hidden" id="dataInput" value="28/02/2010">
+        <div style="display:none" id="dataDiv">28/08/1982</div>
+    </body>
+</html>
