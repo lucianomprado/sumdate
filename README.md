@@ -19,6 +19,8 @@ selector or date
     selector: jQuery return elements html that contains date value.
     date: date value String or Date.
 
+anotherDate: date value String or Date (only used with in function between).
+    
 sumValues : {
     days: 0,
     months: 0,
@@ -26,7 +28,6 @@ sumValues : {
     "hours": 0,
     "minutes": 0,
     "seconds": 0,
-    "milliseconds": 0
 }
 
 functions
@@ -34,6 +35,7 @@ functions
     stringToDate: convert a date type String in Date type
     dateToString: converte a date Type Date in String
     validate: return true if the date value is valid or return false not valid (only date a type String) not compatible another functions.
+    between: return sumVelues (json), get a difference between parameters anotherDate and date/selector.
 
 pattern:
      define format date writing
