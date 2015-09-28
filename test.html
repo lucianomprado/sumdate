@@ -5,15 +5,15 @@
         <meta charset="utf-8" />
         <title>Functions sumdate's test</title>
         <script src="jquery-1.8.1.min.js" charset="utf-8" type="text/javascript"></script>
-        <script src="jquery.sumdate-1.2.1.js" charset="utf-8" type="text/javascript"></script>
+        <script src="jquery.sumdate.min-1.2.2.js" charset="utf-8" type="text/javascript"></script>
         <script src="qunit-1.11.0.js"></script>
-        <link rel="Stylesheet" type="text/css" href="/js/principal.css" />
-	<link rel="Stylesheet" type="text/css" href="/js/shCore.css" />
-	<link rel="Stylesheet" type="text/css" href="/js/shThemeEclipse.css" />
+        <link rel="Stylesheet" type="text/css" href="js/principal.css" />
+		<link rel="Stylesheet" type="text/css" href="js/shCore.css" />
+		<link rel="Stylesheet" type="text/css" href="js/shThemeEclipse.css" />
 
-	<script type="text/javascript" src="/js/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
-	<script type="text/javascript" src="/js/shCore.js"></script>
-	<script type="text/javascript" src="/js/shBrushJScript.js"></script>
+		<script type="text/javascript" src="js/XRegExp.js"></script> <!-- XRegExp is bundled with the final shCore.js during build -->
+		<script type="text/javascript" src="js/shCore.js"></script>
+		<script type="text/javascript" src="js/shBrushJScript.js"></script>
 
         <link rel="stylesheet" href="qunit-1.11.0.css">
         <script charset="utf-8" type="text/javascript">
@@ -44,6 +44,14 @@
                 $('#dataInput').val('32/03/2010');
                 equal( $('[id^="data"]').sumdate({ functions: ['sum'], sumValues: { days: 1 }, internationalisation:{display:true} }).errors[0].msg, 'invalid date', 'message error')
             });
+			test('functions by tickets', function () {
+				var dataAtual = '31/05/2013';
+				var proximaData = $.sumdate({functions:['sum'],sumValues:{months:1},date: dataAtual});
+				equal(proximaData,'30/06/2013','Ticket 1#');
+				dataAtual = '01/09/2015';
+				equal($.sumdate({functions:['sum'],sumValues:{days:30},date: dataAtual}),'01/10/2015','Ticket 2#');
+			});
+			
             SyntaxHighlighter.all();
          </script> 
     </head>
@@ -55,14 +63,14 @@
         <div id="dataDiv">28/08/1982</div>
         <h1>QUnit</h1>
         <script type="syntaxhighlighter" class="brush: js;"><![CDATA[
-             test("Functions by method direct", function () {
+            test("Functions by method direct", function () {
                 var data = '28/02/2010';
                 equal($.sumdate({ date: data, functions: ['sum'], sumValues: { days: 1} }), '01/03/2010', 'sum');
                 var dataAtual = '31/05/2013';
                 equal($.sumdate({functions:['sum'],sumValues:{months:1},date: dataAtual}),'30/06/2013', 'sum month 31/05 to 30/06');
-                equal($.sumdate({ date: data, functions: ['stringToDate'] }), (new Date('2010-02-28T00:00:00.0')).toString(), 'stringToDate');
-                equal($.sumdate({ date: (new Date('2010-02-28T00:00:00.0')), functions: ['dateToString'] }), data, 'dateToString');
-                equal($.sumdate({ date: (new Date('2010-02-28T00:00:00.0')), functions: ['dateToString'], pattern: 'YYYY-MM-DD hh:mm:ss' }), '2010-02-28 00:00:00', 'dateToString and pattern');
+                equal($.sumdate({ date: data, functions: ['stringToDate'] }), (new Date(2010, 01, 28, 00, 00, 00, 0)).toString(), 'stringToDate');
+                equal($.sumdate({ date: (new Date(2010, 01, 28, 00, 00, 00, 0)), functions: ['dateToString'] }), data, 'dateToString');
+                equal($.sumdate({ date: (new Date(2010, 01, 28, 00, 00, 00, 0)), functions: ['dateToString'], pattern: 'YYYY-MM-DD hh:mm:ss' }), '2010-02-28 00:00:00', 'dateToString and pattern');
                 equal($.sumdate({ date: data, functions: ['validate'] }), true, 'validate');
                 data = '29/02/2010';
                 equal($.sumdate({ date: data, functions: ['validate'] }), false, 'validate false');
@@ -82,6 +90,13 @@
                 $('#dataInput').val('32/03/2010');
                 equal( $('[id^="data"]').sumdate({ functions: ['sum'], sumValues: { days: 1 }, internationalisation:{display:true} }).errors[0].msg, 'invalid date', 'message error')
             });
+			test('functions by tickets', function () {
+				var dataAtual = '31/05/2013';
+				var proximaData = $.sumdate({functions:['sum'],sumValues:{months:1},date: dataAtual});
+				equal(proximaData,'30/06/2013','Ticket 1#');
+				dataAtual = '01/09/2015';
+				equal($.sumdate({functions:['sum'],sumValues:{days:30},date: dataAtual}),'01/10/2015','Ticket 2#');
+			});
         ]]></script>
 
     </body>

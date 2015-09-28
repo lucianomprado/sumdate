@@ -1,3 +1,5 @@
+Relese 1.2.2
+Fix bug in sum from result october
 Relese 1.1.0
 Add param anotherDate
 Add function between
