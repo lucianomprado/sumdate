@@ -1,0 +1,23 @@
+{
+  "name": "sumdate",
+  "version": "2.0.0",
+  "description": "component to validate and add dates",
+  "main": "src/sumdate.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Add",
+    "validate",
+    "date"
+  ],
+  "author": "Luciano Mendes do Prado",
+  "license": "ISC",
+  "dependencies": {
+    "npm": "^5.8.0"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.5.5",
+    "mocha": "^5.0.5"
+  }
+}

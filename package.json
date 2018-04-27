@@ -1,0 +1,12 @@
+{ "name": "sumdate",
+  "person":
+  {"name": "Luciano Mendes do Prado",
+    "email":"lucianomendesprado@gmail.com",
+    "url":"https://github.com/lucianomprado/sumdate"
+  },
+  "description": "component to validate and add dates",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "mocha"
+  }
+}

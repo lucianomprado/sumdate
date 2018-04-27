@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: sumdate.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: sumdate.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @class
+ */
+
+class SumDate {
+    /**
+    *  Create a sumdate
+    *  @param {string} dateValue date to work.
+    *  @param {Object} params
+    *  @param {Object.string} params.date date to work.
+    */
+    constructor(dateValue,params){
+
+        this._config = new Config();
+        if(typeof dateValue === 'string'){
+           this._newConfig.date = dateValue;
+        }
+        if(typeof params === 'object'){
+
+            this._newConfig = Object.assign(this._newConfig, params);
+        }
+    }
+
+    /**
+    * getConfig()
+    * @return {Config}
+    * @see Config
+    */
+    get config(){
+
+        return this._config;
+    }
+
+    /**
+    * setConfig(config)
+    * @param {Config} config
+    * @see Config
+    */
+    set config(config){
+
+        return this._config = config;
+    }
+    /**
+    * @return {string} date return date
+    */
+
+    date() {
+        return this._newConfig.date;
+    }
+
+    sum(){
+    }
+};
+
+/**
+* @class
+*
+*/
+class Config {
+
+    /**
+    * Create a config
+    */
+    constructor(){
+
+        this._date = '';
+        this._anotherDate='';
+        this._sumValues = new SumValues();
+        this._functions = ['sum'];
+        this._pattern = 'DD/MM/YYYY';
+        this._internationalisation = new Internationalisation();
+    }
+    /**
+    * @return {String}
+    */
+    get date() {
+        return this._date;
+    }
+
+    /**
+    * @param {String} date
+    */
+    set date(date) {
+
+        this._date = date;
+    }
+    /**
+    * @return {String}
+    */
+    get anotherDate() {
+        return this._anotherDate;
+    }
+
+    /**
+    * @param {String} anotherDate
+    */
+    set anotherDate(anotherDate) {
+
+        this._anotherDate = anotherDate;
+    }
+    /**
+    * @return {SumValues}
+    * @see SumValues
+    */
+    get sumValues() {
+        return this._sumValues;
+    }
+
+    /**
+    * @param {SumValues} sumValues
+    * @see SumValues
+    */
+    set sumValues(sumValues) {
+
+        this._sumValues = sumValues;
+    }
+    /**
+    * @return {Array}
+    */
+    get functions() {
+        return this._functions;
+    }
+
+    /**
+    * @param {Array} functions
+    */
+    set sumValues(functions) {
+
+        this._functions = functions;
+    }
+    /**
+    * @return {String}
+    */
+    get pattern() {
+        return this._pattern;
+    }
+
+    /**
+    * @param {String} pattern
+    */
+    set sumValues(pattern) {
+
+        this._pattern = pattern;
+    }
+    /**
+    * @return {Internationalisation}
+    * @see Internationalisation
+    */
+    get internationalisation() {
+        return this._internationalisation;
+    }
+
+    /**
+    * @param {Internationalisation} internationalisation
+    * @see Internationalisation
+    */
+    set internationalisation(internationalisation) {
+
+        this._internationalisation = internationalisation;
+    }
+};
+
+
+/**
+* @class
+*
+*/
+ class SumValues{
+
+    /**
+    * Create a sumValues
+    */
+    constructor(){
+
+        this._years= 0;
+        this._months = 0,
+        this._days= 0;
+        this._hours = 0;
+        this._minutes = 0;
+        this._seconds = 0;
+    }
+
+    /**
+    * @return {Number}
+    */
+    get years() {
+        return this._years;
+    }
+
+    /**
+    * @param {number} years
+    */
+    set years(years) {
+
+        this._years = years;
+    }
+
+    /**
+    * @return {Number}
+    */
+    get months() {
+        return this._months;
+    }
+
+    /**
+    * @param {number} months
+    */
+    set months(months) {
+
+        this._months = months;
+    }
+    /**
+    * @return {Number}
+    */
+    get days() {
+        return this._days;
+    }
+
+    /**
+    * @param {number} days
+    */
+    set days(days) {
+
+        this._days = days;
+    }
+    /**
+    * @return {Number}
+    */
+    get hours() {
+        return this._hours;
+    }
+
+    /**
+    * @param {number} hours
+    */
+    set hours(hours) {
+
+        this._hours = hours;
+    }
+    /**
+    * @return {Number}
+    */
+    get minutes() {
+        return this._minutes;
+    }
+
+    /**
+    * @param {number} minutes
+    */
+    set minutes(minutes) {
+
+        this._minutes = minutes;
+    }
+    /**
+    * @return {Number}
+    */
+    get seconds() {
+        return this._seconds;
+    }
+
+    /**
+    * @param {number} seconds
+    */
+    set seconds(seconds) {
+
+        this._seconds = seconds;
+    }
+};
+
+/**
+* @class
+*
+*/
+ class Internationalisation {
+
+    /**
+    * Create a internationalisation
+    */
+    constructor(){
+        this._language = new Language();
+        this._display = false;
+        this._divErrorId = undefined;
+        this._jsonError = true;
+    };
+    /**
+    * @return {Language}
+    * @see Language
+    */
+    get language() {
+        return this._language;
+    }
+
+    /**
+    * @param {Language} language
+    * @see Language
+    */
+    set language(language) {
+
+        this._language = language;
+    }
+    /**
+    * @return {boolean}
+    */
+    get display() {
+        return this._display;
+    }
+
+    /**
+    * @param {boolean} display
+    */
+    set display(display) {
+
+        this._display = display;
+    }
+    /**
+    * @return {String}
+    */
+    get divErrorId() {
+        return this._divErrorId;
+    }
+
+    /**
+    * @param {String} divErrorId
+    */
+    set divErrorId(divErrorId) {
+
+        this._divErrorId = divErrorId;
+    }
+    /**
+    * @return {boolean}
+    */
+    get jsonError() {
+        return this._jsonError;
+    }
+
+    /**
+    * @param {boolean} jsonError
+    */
+    set jsonError(jsonError) {
+
+        this._jsonError = jsonError;
+    }
+};
+/**
+* @class
+*
+*/
+class Language {
+
+    /**
+    * Create a language
+    */
+    constructor(){
+
+        this._error= 'Error';
+        this._invalidDate= 'invalid date';
+        this._invalidPattern= 'invalid pattern';
+        this._inAnotherDate= 'in another date';
+    }
+    /**
+     * @return {String}
+     */
+     get error() {
+         return this._error;
+     }
+
+     /**
+     * @param {String} error
+     */
+     set error(error) {
+
+         this._error = error;
+     }
+    /**
+    * @return {String}
+    */
+    get invalidDate() {
+        return this._invalidDate;
+    }
+
+    /**
+    * @param {String} error
+    */
+    set invalidDate(invalidDate) {
+
+        this._invalidDate = invalidDate;
+    }
+   /**
+    * @return {String}
+    */
+    get invalidPattern() {
+        return this._invalidPattern;
+    }
+
+    /**
+    * @param {String} error
+    */
+    set invalidPattern(invalidPattern) {
+
+        this._invalidPattern = invalidPattern;
+    }
+   /**
+    * @return {String}
+    */
+    get inAnotherDate() {
+
+        return this._inAnotherDate;
+    }
+
+    /**
+    * @param {String} error
+    */
+    set inAnotherDate(inAnotherDate) {
+
+        this._inAnotherDate = inAnotherDate;
+    }
+}
+module.exports = SumDate;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Config.html">Config</a></li><li><a href="Internationalisation.html">Internationalisation</a></li><li><a href="Language.html">Language</a></li><li><a href="SumDate.html">SumDate</a></li><li><a href="SumValues.html">SumValues</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Fri Apr 06 2018 13:59:18 GMT-0300 (Hora oficial do Brasil)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
